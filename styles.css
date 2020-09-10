@@ -1,0 +1,220 @@
+:root {
+    --dark-bg: #1e1f1c;
+    --light-bg: #272822;
+    --cian-custom: #03cec2;
+    --green-custom: #adc607;
+    --red-custom: #ed4938;
+    --purple-custom: #7b3dba;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/*### GENERAL ###*/ /*INICIO*/
+body {
+    background-color: var(--light-bg);
+    color: white;
+    font-family: monospace;
+    font-weight: lighter;
+}
+
+.clearfix {
+    clear: both;
+    float: none;
+}
+
+/*### GENERAL ###*/ /*FIN*/
+
+/*### HEADER ###*/ /*INICIO*/
+#header {
+    width: 100%;
+    height: 70px;
+    background-color: var(--dark-bg);
+    box-shadow: 5px 0px 10px darkgray;
+}
+
+#logo {
+    width: 20%;
+    float: left;
+    margin-left: 40px;
+    height: inherit;
+}
+
+#logo h1 {
+    display: block;
+    line-height: 70px;
+    font-size: 40px;
+    letter-spacing: 2px;
+    color: var(--cian-custom);
+    text-shadow: var(--cian-custom) 2px 0 15px;
+}
+
+#menu {
+    width: 20%;
+    height: 100%;
+    float: right;
+    margin-right: 40px;
+    padding-top: 15px;
+}
+
+#new_game_btn,
+#new_game_btn_modal {
+    width: 120px;
+    height: 40px;
+    font-size: 18px;
+    float: right;
+    border: 2px solid var(--green-custom);
+    border-radius: 5px;
+    background-color: var(--dark-grey);
+    color: var(--green-custom);
+    text-shadow: var(--green-custom) 1px 0 5px;
+    box-shadow: 0px 0px 8px var(--green-custom),
+        0px 0px 8px var(--green-custom) inset;
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+#new_game_btn_modal {
+    float: none;
+}
+/*### HEADER ###*/ /*FIN*/
+
+/*### PLAYERS ###*/ /*INICIO*/
+#players {
+    width: 20%;
+    height: 70px;
+    float: center;
+    margin: 0px auto;
+    margin-top: -70px;
+}
+
+.player {
+    font-size: 25px;
+    line-height: 70px;
+}
+
+#label_player_1 {
+    float: left;
+}
+
+#label_player_2 {
+    float: right;
+}
+
+.active_turn {
+    color: var(--green-custom);
+    text-shadow: var(--cian-custom) 2px 0 15px;
+}
+
+#label_player_1.active_turn {
+    color: var(--cian-custom);
+    text-shadow: var(--cian-custom) 2px 0 15px;
+}
+#label_player_2.active_turn {
+    color: var(--red-custom);
+    text-shadow: var(--red-custom) 2px 0 15px;
+}
+/*### PLAYERS ###*/ /*FIN*/
+
+/*### BOARD ###*/ /*INICIO*/
+#board {
+    width: 640px;
+    height: 480px;
+    display: grid;
+    gap: 2px;
+    grid-template-rows: repeat(12, 1fr);
+    grid-template-columns: repeat(16, 1fr);
+    margin: auto;
+    padding: 10px;
+    background: var(--purple-custom);
+    box-shadow: 0px 0px 10px var(--purple-custom);
+    opacity: 0.8;
+}
+
+.square {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: var(--dark-bg);
+}
+
+.square:disabled {
+    /*color: white;/*/
+    font-size: 30px;
+}
+
+.winSquare {
+    box-shadow: 0px 0px 10px green, 0px 0px 10px green inset;
+    background-color: var(--green-custom);
+}
+
+.figure-player-one {
+    color: var(--cian-custom);
+    text-shadow: var(--cian-custom) 2px 0 15px;
+}
+
+.figure-player-two {
+    color: var(--red-custom);
+    text-shadow: var(--red-custom) 2px 0 15px;
+}
+/*### BOARD ###*/ /*FIN*/
+
+/*### FOOTER ###*/ /*INICIO*/
+#footer {
+    width: 100%;
+    height: 30px;
+    text-align: right;
+}
+
+#footer p {
+    display: block;
+    padding-top: 10px;
+    padding-right: 20px;
+    color: var(--cian-custom);
+    text-shadow: var(--cian-custom) 2px 0 15px;
+}
+
+/*### FOOTER ###*/ /*FIN*/
+
+/*### MODAL ###*/ /*FIN*/
+.modal {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    left: 0px;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.modal-content {
+    width: 40%;
+    height: 200px;
+    margin: 100px auto;
+    text-align: center;
+    border-radius: 5px;
+    background: var(--dark-bg);
+    box-shadow: 5px 5px 10px var(--cian-custom),
+        -5px -5px 10px var(--green-custom), -5px 5px 10px var(--green-custom),
+        5px -5px 10px var(--green-custom);
+}
+
+#exit_modal {
+    float: right;
+    font-size: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+    color: var(--green-custom);
+    text-shadow: var(--green-custom) 2px 0 15px;
+}
+
+#player_win {
+    font-size: 50px;
+    margin: 15px auto;
+    color: var(--purple-custom);
+    text-shadow: var(--purple-custom) 2px 0 15px;
+}
+/*### MODAL ###*/ /*FIN*/

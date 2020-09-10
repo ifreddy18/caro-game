@@ -1,3 +1,253 @@
+<!DOCTYPE html>
 <html>
-    Tercer commit
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <title>Caro Game</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="main.js"></script>
+    </head>
+    <body>
+
+        <header id="header">
+            <div id="logo">
+                <h1>Caro Game</h1>
+            </div>
+
+            <div id="menu">
+                <input id="new_game_btn" type="button" value="New game">
+            </div>
+        </header>
+
+        <section id="players">
+            <h3 id="label_player_1" class="player">Player 1</h3>
+            <h3 id="label_player_2" class="player">Player 2</h3>
+        </section>
+
+        <div class="clearfix"></div>
+
+        <section id="board">
+            <!-- Row #1 -->
+            <input class="square" data-row-index="0" data-col-index="0" type="button" value="">
+            <input class="square" data-row-index="0" data-col-index="1" type="button" value="">
+            <input class="square" data-row-index="0" data-col-index="2" type="button" value="">
+            <input class="square" data-row-index="0" data-col-index="3" type="button" value="">
+            <input class="square" data-row-index="0" data-col-index="4" type="button" value="">
+            <input class="square" data-row-index="0" data-col-index="5" type="button" value="">
+            <input class="square" data-row-index="0" data-col-index="6" type="button" value="">
+            <input class="square" data-row-index="0" data-col-index="7" type="button" value="">
+            <input class="square" data-row-index="0" data-col-index="8" type="button" value="">
+            <input class="square" data-row-index="0" data-col-index="9" type="button" value="">
+            <input class="square" data-row-index="0" data-col-index="10" type="button" value="">
+            <input class="square" data-row-index="0" data-col-index="11" type="button" value="">
+            <input class="square" data-row-index="0" data-col-index="12" type="button" value="">
+            <input class="square" data-row-index="0" data-col-index="13" type="button" value="">
+            <input class="square" data-row-index="0" data-col-index="14" type="button" value="">
+            <input class="square" data-row-index="0" data-col-index="15" type="button" value="">
+            <!-- Row #2 -->
+            <input class="square" data-row-index="1" data-col-index="0" type="button" value="">
+            <input class="square" data-row-index="1" data-col-index="1" type="button" value="">
+            <input class="square" data-row-index="1" data-col-index="2" type="button" value="">
+            <input class="square" data-row-index="1" data-col-index="3" type="button" value="">
+            <input class="square" data-row-index="1" data-col-index="4" type="button" value="">
+            <input class="square" data-row-index="1" data-col-index="5" type="button" value="">
+            <input class="square" data-row-index="1" data-col-index="6" type="button" value="">
+            <input class="square" data-row-index="1" data-col-index="7" type="button" value="">
+            <input class="square" data-row-index="1" data-col-index="8" type="button" value="">
+            <input class="square" data-row-index="1" data-col-index="9" type="button" value="">
+            <input class="square" data-row-index="1" data-col-index="10" type="button" value="">
+            <input class="square" data-row-index="1" data-col-index="11" type="button" value="">
+            <input class="square" data-row-index="1" data-col-index="12" type="button" value="">
+            <input class="square" data-row-index="1" data-col-index="13" type="button" value="">
+            <input class="square" data-row-index="1" data-col-index="14" type="button" value="">
+            <input class="square" data-row-index="1" data-col-index="15" type="button" value="">
+            <!-- Row #3 -->
+            <input class="square" data-row-index="2" data-col-index="0" type="button" value="">
+            <input class="square" data-row-index="2" data-col-index="1" type="button" value="">
+            <input class="square" data-row-index="2" data-col-index="2" type="button" value="">
+            <input class="square" data-row-index="2" data-col-index="3" type="button" value="">
+            <input class="square" data-row-index="2" data-col-index="4" type="button" value="">
+            <input class="square" data-row-index="2" data-col-index="5" type="button" value="">
+            <input class="square" data-row-index="2" data-col-index="6" type="button" value="">
+            <input class="square" data-row-index="2" data-col-index="7" type="button" value="">
+            <input class="square" data-row-index="2" data-col-index="8" type="button" value="">
+            <input class="square" data-row-index="2" data-col-index="9" type="button" value="">
+            <input class="square" data-row-index="2" data-col-index="10" type="button" value="">
+            <input class="square" data-row-index="2" data-col-index="11" type="button" value="">
+            <input class="square" data-row-index="2" data-col-index="12" type="button" value="">
+            <input class="square" data-row-index="2" data-col-index="13" type="button" value="">
+            <input class="square" data-row-index="2" data-col-index="14" type="button" value="">
+            <input class="square" data-row-index="2" data-col-index="15" type="button" value="">
+            <!-- Row #4 -->
+            <input class="square" data-row-index="3" data-col-index="0" type="button" value="">
+            <input class="square" data-row-index="3" data-col-index="1" type="button" value="">
+            <input class="square" data-row-index="3" data-col-index="2" type="button" value="">
+            <input class="square" data-row-index="3" data-col-index="3" type="button" value="">
+            <input class="square" data-row-index="3" data-col-index="4" type="button" value="">
+            <input class="square" data-row-index="3" data-col-index="5" type="button" value="">
+            <input class="square" data-row-index="3" data-col-index="6" type="button" value="">
+            <input class="square" data-row-index="3" data-col-index="7" type="button" value="">
+            <input class="square" data-row-index="3" data-col-index="8" type="button" value="">
+            <input class="square" data-row-index="3" data-col-index="9" type="button" value="">
+            <input class="square" data-row-index="3" data-col-index="10" type="button" value="">
+            <input class="square" data-row-index="3" data-col-index="11" type="button" value="">
+            <input class="square" data-row-index="3" data-col-index="12" type="button" value="">
+            <input class="square" data-row-index="3" data-col-index="13" type="button" value="">
+            <input class="square" data-row-index="3" data-col-index="14" type="button" value="">
+            <input class="square" data-row-index="3" data-col-index="15" type="button" value="">
+            <!-- Row #5 -->
+            <input class="square" data-row-index="4" data-col-index="0" type="button" value="">
+            <input class="square" data-row-index="4" data-col-index="1" type="button" value="">
+            <input class="square" data-row-index="4" data-col-index="2" type="button" value="">
+            <input class="square" data-row-index="4" data-col-index="3" type="button" value="">
+            <input class="square" data-row-index="4" data-col-index="4" type="button" value="">
+            <input class="square" data-row-index="4" data-col-index="5" type="button" value="">
+            <input class="square" data-row-index="4" data-col-index="6" type="button" value="">
+            <input class="square" data-row-index="4" data-col-index="7" type="button" value="">
+            <input class="square" data-row-index="4" data-col-index="8" type="button" value="">
+            <input class="square" data-row-index="4" data-col-index="9" type="button" value="">
+            <input class="square" data-row-index="4" data-col-index="10" type="button" value="">
+            <input class="square" data-row-index="4" data-col-index="11" type="button" value="">
+            <input class="square" data-row-index="4" data-col-index="12" type="button" value="">
+            <input class="square" data-row-index="4" data-col-index="13" type="button" value="">
+            <input class="square" data-row-index="4" data-col-index="14" type="button" value="">
+            <input class="square" data-row-index="4" data-col-index="15" type="button" value="">
+            <!-- Row #6 -->
+            <input class="square" data-row-index="5" data-col-index="0" type="button" value="">
+            <input class="square" data-row-index="5" data-col-index="1" type="button" value="">
+            <input class="square" data-row-index="5" data-col-index="2" type="button" value="">
+            <input class="square" data-row-index="5" data-col-index="3" type="button" value="">
+            <input class="square" data-row-index="5" data-col-index="4" type="button" value="">
+            <input class="square" data-row-index="5" data-col-index="5" type="button" value="">
+            <input class="square" data-row-index="5" data-col-index="6" type="button" value="">
+            <input class="square" data-row-index="5" data-col-index="7" type="button" value="">
+            <input class="square" data-row-index="5" data-col-index="8" type="button" value="">
+            <input class="square" data-row-index="5" data-col-index="9" type="button" value="">
+            <input class="square" data-row-index="5" data-col-index="10" type="button" value="">
+            <input class="square" data-row-index="5" data-col-index="11" type="button" value="">
+            <input class="square" data-row-index="5" data-col-index="12" type="button" value="">
+            <input class="square" data-row-index="5" data-col-index="13" type="button" value="">
+            <input class="square" data-row-index="5" data-col-index="14" type="button" value="">
+            <input class="square" data-row-index="5" data-col-index="15" type="button" value="">
+            <!-- Row #7 -->
+            <input class="square" data-row-index="6" data-col-index="0" type="button" value="">
+            <input class="square" data-row-index="6" data-col-index="1" type="button" value="">
+            <input class="square" data-row-index="6" data-col-index="2" type="button" value="">
+            <input class="square" data-row-index="6" data-col-index="3" type="button" value="">
+            <input class="square" data-row-index="6" data-col-index="4" type="button" value="">
+            <input class="square" data-row-index="6" data-col-index="5" type="button" value="">
+            <input class="square" data-row-index="6" data-col-index="6" type="button" value="">
+            <input class="square" data-row-index="6" data-col-index="7" type="button" value="">
+            <input class="square" data-row-index="6" data-col-index="8" type="button" value="">
+            <input class="square" data-row-index="6" data-col-index="9" type="button" value="">
+            <input class="square" data-row-index="6" data-col-index="10" type="button" value="">
+            <input class="square" data-row-index="6" data-col-index="11" type="button" value="">
+            <input class="square" data-row-index="6" data-col-index="12" type="button" value="">
+            <input class="square" data-row-index="6" data-col-index="13" type="button" value="">
+            <input class="square" data-row-index="6" data-col-index="14" type="button" value="">
+            <input class="square" data-row-index="6" data-col-index="15" type="button" value="">
+            <!-- Row #8 -->
+            <input class="square" data-row-index="7" data-col-index="0" type="button" value="">
+            <input class="square" data-row-index="7" data-col-index="1" type="button" value="">
+            <input class="square" data-row-index="7" data-col-index="2" type="button" value="">
+            <input class="square" data-row-index="7" data-col-index="3" type="button" value="">
+            <input class="square" data-row-index="7" data-col-index="4" type="button" value="">
+            <input class="square" data-row-index="7" data-col-index="5" type="button" value="">
+            <input class="square" data-row-index="7" data-col-index="6" type="button" value="">
+            <input class="square" data-row-index="7" data-col-index="7" type="button" value="">
+            <input class="square" data-row-index="7" data-col-index="8" type="button" value="">
+            <input class="square" data-row-index="7" data-col-index="9" type="button" value="">
+            <input class="square" data-row-index="7" data-col-index="10" type="button" value="">
+            <input class="square" data-row-index="7" data-col-index="11" type="button" value="">
+            <input class="square" data-row-index="7" data-col-index="12" type="button" value="">
+            <input class="square" data-row-index="7" data-col-index="13" type="button" value="">
+            <input class="square" data-row-index="7" data-col-index="14" type="button" value="">
+            <input class="square" data-row-index="7" data-col-index="15" type="button" value="">
+            <!-- Row #9 -->
+            <input class="square" data-row-index="8" data-col-index="0" type="button" value="">
+            <input class="square" data-row-index="8" data-col-index="1" type="button" value="">
+            <input class="square" data-row-index="8" data-col-index="2" type="button" value="">
+            <input class="square" data-row-index="8" data-col-index="3" type="button" value="">
+            <input class="square" data-row-index="8" data-col-index="4" type="button" value="">
+            <input class="square" data-row-index="8" data-col-index="5" type="button" value="">
+            <input class="square" data-row-index="8" data-col-index="6" type="button" value="">
+            <input class="square" data-row-index="8" data-col-index="7" type="button" value="">
+            <input class="square" data-row-index="8" data-col-index="8" type="button" value="">
+            <input class="square" data-row-index="8" data-col-index="9" type="button" value="">
+            <input class="square" data-row-index="8" data-col-index="10" type="button" value="">
+            <input class="square" data-row-index="8" data-col-index="11" type="button" value="">
+            <input class="square" data-row-index="8" data-col-index="12" type="button" value="">
+            <input class="square" data-row-index="8" data-col-index="13" type="button" value="">
+            <input class="square" data-row-index="8" data-col-index="14" type="button" value="">
+            <input class="square" data-row-index="8" data-col-index="15" type="button" value="">
+            <!-- Row #10 -->
+            <input class="square" data-row-index="9" data-col-index="0" type="button" value="">
+            <input class="square" data-row-index="9" data-col-index="1" type="button" value="">
+            <input class="square" data-row-index="9" data-col-index="2" type="button" value="">
+            <input class="square" data-row-index="9" data-col-index="3" type="button" value="">
+            <input class="square" data-row-index="9" data-col-index="4" type="button" value="">
+            <input class="square" data-row-index="9" data-col-index="5" type="button" value="">
+            <input class="square" data-row-index="9" data-col-index="6" type="button" value="">
+            <input class="square" data-row-index="9" data-col-index="7" type="button" value="">
+            <input class="square" data-row-index="9" data-col-index="8" type="button" value="">
+            <input class="square" data-row-index="9" data-col-index="9" type="button" value="">
+            <input class="square" data-row-index="9" data-col-index="10" type="button" value="">
+            <input class="square" data-row-index="9" data-col-index="11" type="button" value="">
+            <input class="square" data-row-index="9" data-col-index="12" type="button" value="">
+            <input class="square" data-row-index="9" data-col-index="13" type="button" value="">
+            <input class="square" data-row-index="9" data-col-index="14" type="button" value="">
+            <input class="square" data-row-index="9" data-col-index="15" type="button" value="">
+            <!-- Row #11 -->
+            <input class="square" data-row-index="10" data-col-index="0" type="button" value="">
+            <input class="square" data-row-index="10" data-col-index="1" type="button" value="">
+            <input class="square" data-row-index="10" data-col-index="2" type="button" value="">
+            <input class="square" data-row-index="10" data-col-index="3" type="button" value="">
+            <input class="square" data-row-index="10" data-col-index="4" type="button" value="">
+            <input class="square" data-row-index="10" data-col-index="5" type="button" value="">
+            <input class="square" data-row-index="10" data-col-index="6" type="button" value="">
+            <input class="square" data-row-index="10" data-col-index="7" type="button" value="">
+            <input class="square" data-row-index="10" data-col-index="8" type="button" value="">
+            <input class="square" data-row-index="10" data-col-index="9" type="button" value="">
+            <input class="square" data-row-index="10" data-col-index="10" type="button" value="">
+            <input class="square" data-row-index="10" data-col-index="11" type="button" value="">
+            <input class="square" data-row-index="10" data-col-index="12" type="button" value="">
+            <input class="square" data-row-index="10" data-col-index="13" type="button" value="">
+            <input class="square" data-row-index="10" data-col-index="14" type="button" value="">
+            <input class="square" data-row-index="10" data-col-index="15" type="button" value="">
+            <!-- Row #12 -->
+            <input class="square" data-row-index="11" data-col-index="0" type="button" value="">
+            <input class="square" data-row-index="11" data-col-index="1" type="button" value="">
+            <input class="square" data-row-index="11" data-col-index="2" type="button" value="">
+            <input class="square" data-row-index="11" data-col-index="3" type="button" value="">
+            <input class="square" data-row-index="11" data-col-index="4" type="button" value="">
+            <input class="square" data-row-index="11" data-col-index="5" type="button" value="">
+            <input class="square" data-row-index="11" data-col-index="6" type="button" value="">
+            <input class="square" data-row-index="11" data-col-index="7" type="button" value="">
+            <input class="square" data-row-index="11" data-col-index="8" type="button" value="">
+            <input class="square" data-row-index="11" data-col-index="9" type="button" value="">
+            <input class="square" data-row-index="11" data-col-index="10" type="button" value="">
+            <input class="square" data-row-index="11" data-col-index="11" type="button" value="">
+            <input class="square" data-row-index="11" data-col-index="12" type="button" value="">
+            <input class="square" data-row-index="11" data-col-index="13" type="button" value="">
+            <input class="square" data-row-index="11" data-col-index="14" type="button" value="">
+            <input class="square" data-row-index="11" data-col-index="15" type="button" value="">
+
+        </section>
+
+        <!-- Foorer -->
+        <footer id="footer">
+            <p>&copy; Freddy Michelena</p>
+        </footer>
+
+        <!-- Modal -->
+        <div id="end_game_modal" class="modal">
+            <div class="modal-content">
+                <span id="exit_modal">&times;</span>
+                <div class="clearfix"></div>
+                <h3 id="player_win">Player 1 WON!!!</h3>
+                <input id="new_game_btn_modal" type="button" value="New game">
+            </div>
+        </div>
+        
+    </body>
 </html>
