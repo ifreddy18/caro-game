@@ -180,7 +180,7 @@ body {
 
 /*### MODAL ###*/ /*FIN*/
 .modal {
-    display: none;
+    display: block;
     width: 100%;
     height: 100%;
     position: fixed;
@@ -191,7 +191,7 @@ body {
 }
 
 .modal-content {
-    width: 40%;
+    width: 400px;
     height: 200px;
     margin: 100px auto;
     text-align: center;
@@ -212,8 +212,10 @@ body {
 }
 
 #player_win {
-    font-size: 50px;
+    font-size: 40px;
     margin: 15px auto;
+    padding: 20px;
+    padding-top: 10px;
     color: var(--purple-custom);
     text-shadow: var(--purple-custom) 2px 0 15px;
 }
