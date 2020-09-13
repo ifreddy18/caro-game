@@ -25,13 +25,13 @@ window.onload = () => {
 };
 
 // Init Players
-var playerOne = new Player("Player One", "X", "");
-var playerTwo = new Player("Player Two", "O", "");
+var playerOne = new Player("Player 1", "X", "");
+var playerTwo = new Player("Player 2", "O", "");
 playerOne.turn = true;
 var winner = false;
 
 // Init boards
-var winConditionArrow = 4;
+var winConditionArrow = 5;
 var boardRows = 12; 
 var boardColumns = 16; 
 var boardInputs = [ [], [], [], [], [], [], [], [], [], [], [], [] ];// boardRows 12
@@ -193,6 +193,8 @@ function evaluateWinCondition(condition, row_index, col_index, playerFigure) {
             for (let x = 0; x <= winConditionArrow; x++) {
                 try {
                     if (
+                        boardInputs[row_index + (x - 4)][col_index + (x - 3)]
+                            .value == playerFigure &&
                         boardInputs[row_index + (x - 3)][col_index + (x - 3)]
                             .value == playerFigure &&
                         boardInputs[row_index + (x - 2)][col_index + (x - 2)]
@@ -202,6 +204,9 @@ function evaluateWinCondition(condition, row_index, col_index, playerFigure) {
                         boardInputs[row_index + x][col_index + x].value ==
                             playerFigure
                     ) {
+                        boardInputs[row_index + (x - 4)][
+                            col_index + (x - 4)
+                        ].classList.add("winSquare");
                         boardInputs[row_index + (x - 3)][
                             col_index + (x - 3)
                         ].classList.add("winSquare");
@@ -227,6 +232,8 @@ function evaluateWinCondition(condition, row_index, col_index, playerFigure) {
             for (let x = 0; x <= winConditionArrow; x++) {
                 try {
                     if (
+                        boardInputs[row_index + (x - 4)][col_index + (4 - x)]
+                            .value == playerFigure &&
                         boardInputs[row_index + (x - 3)][col_index + (3 - x)]
                             .value == playerFigure &&
                         boardInputs[row_index + (x - 2)][col_index + (2 - x)]
@@ -236,6 +243,9 @@ function evaluateWinCondition(condition, row_index, col_index, playerFigure) {
                         boardInputs[row_index + x][col_index - x].value ==
                             playerFigure
                     ) {
+                        boardInputs[row_index + (x - 4)][
+                            col_index + (4 - x)
+                        ].classList.add("winSquare");
                         boardInputs[row_index + (x - 3)][
                             col_index + (3 - x)
                         ].classList.add("winSquare");
@@ -261,6 +271,8 @@ function evaluateWinCondition(condition, row_index, col_index, playerFigure) {
             for (let x = 0; x <= winConditionArrow; x++) {
                 try {
                     if (
+                        boardInputs[row_index][col_index + (x - 4)].value ==
+                            playerFigure &&
                         boardInputs[row_index][col_index + (x - 3)].value ==
                             playerFigure &&
                         boardInputs[row_index][col_index + (x - 2)].value ==
@@ -270,6 +282,9 @@ function evaluateWinCondition(condition, row_index, col_index, playerFigure) {
                         boardInputs[row_index][col_index + x].value ==
                             playerFigure
                     ) {
+                        boardInputs[row_index][
+                            col_index + (x - 4)
+                        ].classList.add("winSquare");
                         boardInputs[row_index][
                             col_index + (x - 3)
                         ].classList.add("winSquare");
@@ -295,6 +310,8 @@ function evaluateWinCondition(condition, row_index, col_index, playerFigure) {
             for (let x = 0; x <= winConditionArrow; x++) {
                 try {
                     if (
+                        boardInputs[row_index + (x - 4)][col_index].value ==
+                            playerFigure &&
                         boardInputs[row_index + (x - 3)][col_index].value ==
                             playerFigure &&
                         boardInputs[row_index + (x - 2)][col_index].value ==
@@ -304,6 +321,9 @@ function evaluateWinCondition(condition, row_index, col_index, playerFigure) {
                         boardInputs[row_index + x][col_index].value ==
                             playerFigure
                     ) {
+                        boardInputs[row_index + (x - 4)][
+                            col_index
+                        ].classList.add("winSquare");
                         boardInputs[row_index + (x - 3)][
                             col_index
                         ].classList.add("winSquare");
