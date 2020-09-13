@@ -193,7 +193,7 @@ function evaluateWinCondition(condition, row_index, col_index, playerFigure) {
             for (let x = 0; x <= winConditionArrow; x++) {
                 try {
                     if (
-                        boardInputs[row_index + (x - 4)][col_index + (x - 3)]
+                        boardInputs[row_index + (x - 4)][col_index + (x - 4)]
                             .value == playerFigure &&
                         boardInputs[row_index + (x - 3)][col_index + (x - 3)]
                             .value == playerFigure &&
