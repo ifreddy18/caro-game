@@ -32,11 +32,11 @@ body {
     width: 100%;
     height: 70px;
     background-color: var(--dark-bg);
-    box-shadow: 5px 0px 10px darkgray;
+    box-shadow: 5px 0px 10px rgba(240, 240, 240, 0.8);
 }
 
 #logo {
-    width: 20%;
+    width: 25%;
     float: left;
     margin-left: 40px;
     height: inherit;
@@ -83,7 +83,7 @@ body {
 
 /*### PLAYERS ###*/ /*INICIO*/
 #players {
-    width: 20%;
+    width: 260px;
     height: 70px;
     float: center;
     margin: 0px auto;
@@ -180,7 +180,7 @@ body {
 
 /*### MODAL ###*/ /*FIN*/
 .modal {
-    display: none;
+    display: block;
     width: 100%;
     height: 100%;
     position: fixed;
@@ -191,7 +191,7 @@ body {
 }
 
 .modal-content {
-    width: 40%;
+    width: 400px;
     height: 200px;
     margin: 100px auto;
     text-align: center;
@@ -212,8 +212,10 @@ body {
 }
 
 #player_win {
-    font-size: 50px;
+    font-size: 40px;
     margin: 15px auto;
+    padding: 20px;
+    padding-top: 10px;
     color: var(--purple-custom);
     text-shadow: var(--purple-custom) 2px 0 15px;
 }

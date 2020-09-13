@@ -4,7 +4,8 @@
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
         <title>Caro Game</title>
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/responsive.css">
         <script src="main.js"></script>
     </head>
     <body>
@@ -20,11 +21,13 @@
         </header>
 
         <section id="players">
-            <h3 id="label_player_1" class="player">Player 1</h3>
-            <h3 id="label_player_2" class="player">Player 2</h3>
+            <div class="wrap">
+                <h3 id="label_player_1" class="player">Player 1</h3>
+                <h3 id="label_player_2" class="player">Player 2</h3>
+            </div>
         </section>
 
-        <div class="clearfix"></div>
+        <div id="spacer" class="clearfix"></div>
 
         <section id="board">
             <!-- Row #1 -->

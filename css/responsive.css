@@ -1,0 +1,91 @@
+@media (max-width: 890px){
+    
+    #header{
+        height: 50px;
+    }
+
+    #logo h1{
+        font-size: 30px;
+        line-height: 50px;
+    }
+
+    #menu{
+        padding-top: 10px;
+    }
+
+    #new_game_btn{
+        width: 100px;
+        height: 30px;
+        font-size: 16px;
+    }
+
+    #players{
+        width: 180px;
+    }
+
+    .player{
+        font-size: 18px;
+        line-height: 50px;
+    }
+
+}
+
+
+
+@media (max-width: 668px){
+    #header{
+       position: fixed;
+       z-index: 1;
+    }
+
+    #spacer{
+        height: 50px;
+    }
+
+    #logo{
+        width: 50%;
+    }
+
+    #players{
+        display: none;
+    }
+
+    #board{
+      overflow: scroll;
+    }
+
+}
+
+@media (max-width: 450px){
+
+    #new_game_btn_modal{
+        width: 100px;
+        height: 30px;
+        font-size: 16px;
+    }
+
+    .modal-content {
+        width: 300px;
+    }
+
+    #player_win{
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 370px){
+
+    #logo h1{
+        font-size: 24px;
+    }
+
+    #menu{
+        padding-top: 10px;
+    }
+
+    #new_game_btn{
+        width: 80px;
+        height: 30px;
+        font-size: 14px;
+    }
+}
