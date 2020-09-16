@@ -1,17 +1,15 @@
 "use strict";
 // Class
 class Player {
-    constructor(name, figure, label) {
+    constructor(name, figure) {
         this.name = name;
         this.figure = figure;
         this.turn = false;
-        this.label = label;
         this.showPlayer = () => {
             console.log(`
                 Name: ${this.name}
                 Figure: ${this.figure}
                 Turn: ${this.turn}
-                Label: ${this.label}
             `);
         };
     }
@@ -25,16 +23,16 @@ window.onload = () => {
 };
 
 // Init Players
-var playerOne = new Player("Player 1", "X", "");
-var playerTwo = new Player("Player 2", "O", "");
+var playerOne = new Player("Player 1", "X");
+var playerTwo = new Player("Player 2", "O");
 playerOne.turn = true;
 var winner = false;
 
 // Init boards
 var winConditionArrow = 5;
-var boardRows = 12; 
-var boardColumns = 16; 
-var boardInputs = [ [], [], [], [], [], [], [], [], [], [], [], [] ];// boardRows 12
+var boardRows = 12;
+var boardColumns = 16;
+var boardInputs = [[], [], [], [], [], [], [], [], [], [], [], []]; // boardRows 12
 
 // Init elementos
 function initElements() {
@@ -50,9 +48,7 @@ function initElements() {
     var new_game_btn_modal = document.getElementById("new_game_btn_modal");
     var exit_modal = document.getElementById("exit_modal");
     var player_win = document.getElementById("player_win");
-    
-    
-    
+
     var cont = 0;
     // Squares
     for (let i = 0; i < boardRows; i++) {
@@ -83,7 +79,7 @@ function initEventListeners() {
     new_game_btn_modal.addEventListener("click", startNewGame);
 }
 
-function startNewGame(){
+function startNewGame() {
     for (let i = 0; i < boardRows; i++) {
         for (let j = 0; j < boardColumns; j++) {
             boardInputs[i][j].disabled = false;
@@ -91,7 +87,6 @@ function startNewGame(){
             boardInputs[i][j].classList.remove("winSquare");
             boardInputs[i][j].classList.remove("figure-player-one");
             boardInputs[i][j].classList.remove("figure-player-two");
-
         }
     }
 
@@ -104,9 +99,9 @@ function startNewGame(){
     end_game_modal.style.display = "none";
 }
 
-function exitModal(){
+function exitModal() {
     end_game_modal.style.display = "none";
-    
+
     for (let i = 0; i < boardRows; i++) {
         for (let j = 0; j < boardColumns; j++) {
             boardInputs[i][j].disabled = "disabled";
@@ -114,13 +109,13 @@ function exitModal(){
     }
 }
 
-function nextTurn(){
-    if (playerOne.turn){
+function nextTurn() {
+    if (playerOne.turn) {
         playerOne.turn = false;
         playerTwo.turn = true;
         label_player_1.classList.remove("active_turn");
         label_player_2.classList.add("active_turn");
-    } else if (playerTwo.turn){
+    } else if (playerTwo.turn) {
         playerOne.turn = true;
         playerTwo.turn = false;
         label_player_1.classList.add("active_turn");
@@ -172,15 +167,14 @@ function evaluateBoard(row_index, col_index, playerFigure) {
     if (winner) {
         console.log("Ha ganado el jugador: " + playerFigure);
         let playerWinner;
-        if(playerFigure == playerOne.figure){
+        if (playerFigure == playerOne.figure) {
             playerWinner = playerOne.name;
-        } else if (playerFigure == playerTwo.figure){
+        } else if (playerFigure == playerTwo.figure) {
             playerWinner = playerTwo.name;
         }
 
-        player_win.innerText = `${playerWinner} WON!!!`
+        player_win.innerText = `${playerWinner} WON!!!`;
         end_game_modal.style.display = "block";
-
     } else {
         return console.log("Next player's turn");
     }
@@ -349,10 +343,10 @@ function evaluateWinCondition(condition, row_index, col_index, playerFigure) {
     }
 }
 
-function customSquare(square, figure){
-    if (figure == playerOne.figure){
-        square.classList.add('figure-player-one');
-    } else if(figure == playerTwo.figure){
-        square.classList.add('figure-player-two');
+function customSquare(square, figure) {
+    if (figure == playerOne.figure) {
+        square.classList.add("figure-player-one");
+    } else if (figure == playerTwo.figure) {
+        square.classList.add("figure-player-two");
     }
 }
